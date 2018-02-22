@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  div.background.short.arena
+    h1.background-image-text.title.short= pageHeader.title
+    h4.background-image-text.text.short= pageHeader.subtitle
+    div.overlay
+
+  div.container
+    div.row
+      ul.collection
+        each player in players
+          li.collection-item
+            div.players-detail
+              div.row
+                div.col-sm-3
+                  h5.players-header= `Level ${player.level}`
+                  div.players-description
+                    i.glyphicon.glyphicon-lock
+                    span= `XP: ${player.maxExp}`
+                div.col-sm-5
+                  h5.players-header Torres de Arena
+                  div.players-description
+                    i.glyphicon.glyphicon-heart
+                    span= ` HP: ${player.arenaTowers.hitpoints}`
+                    i.glyphicon.glyphicon-asterisk
+                    span= ` DMG: ${player.arenaTowers.damage}`
+                div.col-sm-4
+                  h5.players-header Torre do Rei
+                  div.players-description
+                    i.glyphicon.glyphicon-heart
+                    span= ` HP: ${player.kingsTower.hitpoints}`
+                    i.glyphicon.glyphicon-asterisk
+                    span= ` DMG: ${player.kingsTower.damage}`
+
+  div.container
+    div.row
+      div.card.col-12
+        div.card-content
+          div.card-title
+            h4 Nota:
+          p As torres da arena atingem a sempre a velocidade
+            strong  0.8
+            | , e o alcance é
+            strong  7.5.
+          p A velocidade de sucesso da Torre do Rei é
+            strong  1
+            |  e o alcance é
+            strong  7.

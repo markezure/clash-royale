@@ -1,0 +1,12 @@
+extends layout
+
+include _inc/cardsHTML
+
+block content
+  div.background.short.arena
+    h1.background-image-text.title.short= pageHeader.title
+    h4.background-image-text.text.short= pageHeader.subtitle
+    div.overlay
+
+  div.container 
+    +renderCardsCollection(cards)

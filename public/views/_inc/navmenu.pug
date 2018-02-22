@@ -1,43 +1,17 @@
-nav
-  div.nav-wrapper
-    a(class='button-collapse', data-activates='mobile', href='#')
-      i.material-icons menu
-    ul#nav-mobile.left.hide-on-med-and-down
-      li(class=(pageHeader.title === 'Homepage' ? 'active' : ''))
-        a( href='/') Home
-      li(class=(pageHeader.title === 'Card List' ? 'active' : ''))
-        a(href='/cards?page=0&limit=8') Cards
-      //- li(class=(pageHeader.title === 'Decks' ? 'active' : ''))
-      //-   a(href='/decks') Decks
-      li(class=(pageHeader.title === 'Random Deck' ? 'active' : ''))
-        a(href='/random') Random Deck
-      //- li(class=(pageHeader.title === 'Leagues' ? 'active' : ''))
-      //-   a(href='/leagues') Leagues
-      //- li(class=(pageHeader.title === 'Chests' ? 'active' : ''))
-      //-   a(href='/chests') Chests
-      li(class=(pageHeader.title === 'Players' ? 'active' : ''))
-        a(href='/players') Players
-      //- li(class=(pageHeader.title === 'About' ? 'active' : ''))
-      //-   a(href='/about') About
-
-    ul#mobile.side-nav
-      li(class=(pageHeader.title === 'Homepage' ? 'active' : ''))
-        a( href='/') Home
-          i.material-icons cloud
-      li(class=(pageHeader.title === 'Card List' ? 'active' : ''))
-        a(href='/cards?page=0&limit=8') Cards
-      //- li(class=(pageHeader.title === 'Decks' ? 'active' : ''))
-      //-   a(href='/decks') Decks
-      li(class=(pageHeader.title === 'Random Deck' ? 'active' : ''))
-        a(href='/random') Random Deck
-      //- li(class=(pageHeader.title === 'Leagues' ? 'active' : ''))
-      //-   a(href='/leagues') Leagues
-      //- li(class=(pageHeader.title === 'Chests' ? 'active' : ''))
-      //-   a(href='/chests') Chests
-      li(class=(pageHeader.title === 'Players' ? 'active' : ''))
-        a(href='/players') Players
-      //- li(class=(pageHeader.title === 'About' ? 'active' : ''))
-      //-   a(href='/about') About
+nav.nav-wrapper.navbar.navbar-expand-md
+  div.container
+    a.navbar-brand(href='/')
+      img(src='../assets/images/logo.png')
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#mobilenav', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #mobilenav.collapse.navbar-collapse
+      ul.navbar-nav.mx-auto
+        li(class=(pageHeader.title === 'Cartas' ? 'active' : '')).nav-item
+          a.nav-link(href='/cards') Cartas
+        li(class=(pageHeader.title === 'Decks de Batalha' ? 'active' : '')).nav-item
+          a.nav-link(href='/decks') Decks
+        li(class=(pageHeader.title === 'Jogadores' ? 'active' : '')).nav-item
+          a.nav-link(href='/players') Jogadores
 
 script.
   //- Load collapsible menu

@@ -1,28 +1,18 @@
 const config = require('../../app/config');
 const trae = require('trae');
 
-module.exports.index = (req, res, next) => {
-  res.render('index', {
-    pageHeader: {
-      title: 'Decks',
-      subtitle: 'Build your deck'
-    },
-    cards: []
-  });
-}
-
-let baseResponseObject = {
+let objDecksBase = {
   pageHeader: {
-    title: 'Random Deck',
-    subtitle: 'Generate a random deck!'
+    title: 'Decks de Batalha',
+    subtitle: 'Gerador Decks aleatório.'
   }
 };
 
 module.exports.getDecks = (req, res, next) => {
   trae.get(config.baseURL+'/random-deck')
     .then((cards) => {
-      baseResponseObject.cards = cards.data;
-      res.render('random-deck', baseResponseObject);
+      objDecksBase.cards = cards.data;
+      res.render('random-deck', objDecksBase);
     }).catch((err) => {
       console.error(err);
     });

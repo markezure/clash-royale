@@ -1,0 +1,324 @@
+/* Heights */
+/* General styles */
+@font-face {
+  font-family: "Supercell-magic-webfont";
+  src: url("./fonts/Supercell-magic-webfont.ttf"); }
+html, body {
+  background-color: #f1f1f1;
+  color: #565656; }
+
+.main-content {
+  position: relative;
+  overflow: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Supercell-magic-webfont", "Georgia", serif; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.17em; }
+
+h4 {
+  font-size: 1.12em; }
+
+h5 {
+  font-size: 0.83em; }
+
+h6 {
+  font-size: 0.75em; }
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+  .row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0; }
+
+.home {
+  width: 70%;
+  margin: 0 auto; }
+
+.collection {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+  .collection li {
+    list-style: none; }
+
+.title {
+  display: inline-block;
+  margin-top: 1em;
+  position: relative;
+  z-index: 2; }
+
+footer.footer {
+  font-family: "Supercell-magic-webfont", "Georgia", serif;
+  font-size: 0.75em;
+  color: #363636;
+  padding: 20px !important;
+  margin: 1em 0 !important; }
+
+footer p.small {
+  color: #858585;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 0.9rem; }
+
+/* Nav */
+nav {
+  text-shadow: 2px 1px 3px #343033;
+  background-image: url("../images/bgnav.png");
+  font-family: "Supercell-magic-webfont", "Georgia", serif; }
+
+nav li a {
+  color: #39bafc; }
+  nav li a:hover {
+    color: #feb252 !important; }
+nav li.active a {
+  color: #feb252; }
+  nav li.active a:hover {
+    color: #feb252 !important; }
+
+@media only screen and (min-width: 601px) {
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: auto;
+    line-height: 45px; } }
+.side-nav {
+  background-color: #565656; }
+
+.side-nav li > a {
+  color: white; }
+
+.side-nav li > a:hover {
+  color: #feb252; }
+
+/* Card layout */
+.card {
+  position: relative;
+  background: #fff;
+  padding: 1em;
+  margin: .5em .5em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  transition: all 300ms ease-in-out; }
+  .card:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25); }
+
+.card2 {
+  position: relative;
+  background: #fff;
+  padding: 1em;
+  margin: .5em .5em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  transition: all 300ms ease-in-out; }
+  .card2:hover {
+    transform: scale(1.01) rotate(1deg);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25); }
+
+.card-name {
+  font-family: "Supercell-magic-webfont", "Georgia", serif;
+  margin-bottom: 1em !important; }
+  .card-name a {
+    color: black; }
+
+.type,
+.rarity {
+  color: #858585;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+p.type,
+p.rarity {
+  margin: 0.25em 0 !important; }
+
+p.small.text.type,
+p.small.text.rarity {
+  color: #858585; }
+
+.small.text {
+  font-size: 0.75em; }
+
+.card-image-container {
+  text-align: center; }
+
+.card-image {
+  max-width: 60%;
+  margin: auto; }
+
+.card-image-detail {
+  max-width: 65%;
+  margin: 2em; }
+
+.card-action {
+  color: #343033;
+  font-weight: bold; }
+
+.card-info-name {
+  color: #363636; }
+
+/* Icons */
+.custom-icon {
+  font-size: 0; }
+
+.custom-icon-label {
+  vertical-align: sub;
+  margin: 0 0.25em; }
+
+.elixir {
+  background-image: url("../images/Elixir.png");
+  background-size: cover;
+  padding: 8px; }
+
+.add.circle.icon.button {
+  color: #cd14d9;
+  font-size: 1.5em; }
+
+.icon {
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+/* Background Styling */
+.background {
+  width: 100vw;
+  height: 300px;
+  position: relative;
+  background-color: #0d4677;
+  margin-bottom: 2em;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.25); }
+
+.background.short {
+  width: 100vw;
+  height: 150px;
+  position: relative; }
+
+.background > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: background-color, 1s ease-out;
+  z-index: 1; }
+
+.background.short > .overlay {
+  height: 150px; }
+
+.background > .overlay:hover {
+  background-color: rgba(97, 63, 21, 0.7);
+  transition: all 1s ease-out; }
+
+.background-image-text {
+  width: 100%;
+  text-align: center;
+  color: #feb252;
+  text-shadow: 2px 2px #343033; }
+
+.background-image-text.title {
+  position: relative;
+  z-index: 2; }
+
+.background-image-text.text {
+  position: relative;
+  z-index: 2; }
+
+.background-image-text.title.short {
+  position: relative;
+  z-index: 2; }
+
+.background-image-text.text.short {
+  position: relative;
+  z-index: 2; }
+
+/* Hack - Remove */
+h6.background-image-text.text {
+  position: relative;
+  z-index: 2; }
+
+.arena {
+  background-image: url("../images/cards-bg.png");
+  background-position: left center;
+  background-repeat: no-repeat; }
+
+.camp {
+  background-image: url("../images/arena4.jpg");
+  background-size: cover; }
+
+.league {
+  background-image: url("../images/arena3.jpg");
+  background-size: cover; }
+
+.chests {
+  background-image: url("../images/arena5.jpg");
+  background-size: cover; }
+
+.players {
+  background-image: url("../images/arena7.jpg");
+  background-size: cover; }
+
+/* Utils */
+.text-faded {
+  color: #858585; }
+
+.pushup {
+  margin-top: -60px !important; }
+
+.pushup.higher {
+  margin-top: -100px !important; }
+
+.spacer {
+  margin: 2em 0 !important; }
+
+.separator {
+  margin: 2em 0;
+  border-top: 1px solid #858585; }
+
+.text-centered {
+  text-align: center !important; }
+
+/* Homepage */
+.home {
+  text-align: center; }
+
+.home img {
+  max-width: 30% !important;
+  margin: 1.5em 0; }
+
+.home > .detail {
+  text-shadow: none;
+  color: #858585; }
+
+.laugh {
+  background-image: url("../images/laugh.png");
+  background-size: cover; }
+
+/* Players */
+.players-detail {
+  text-align: center; }
+  .players-detail .row {
+    margin: 0.75em 0; }
+
+.players-header {
+  font-weight: 600;
+  font-size: 0.85em;
+  margin: 1em 0; }
+
+.players-description span {
+  color: #858585;
+  margin: 0 1em 0 0; }
+.players-description i {
+  margin: 0 0.5em; }
+.players-description i.protect {
+  color: #565656; }
+.players-description i.heart {
+  color: #d40000; }
+.players-description i.bomb {
+  color: black; }
+
+/*# sourceMappingURL=layout.css.map */
