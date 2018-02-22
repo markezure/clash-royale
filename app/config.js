@@ -1,0 +1,1 @@
+module.exports = { baseURL: 'http://www.clashapi.xyz/api' }

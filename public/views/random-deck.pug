@@ -1,0 +1,32 @@
+extends layout
+
+include _inc/cardsHTML
+
+block content
+  div.background.short.players
+    div.blur
+  h1.background-image-text.title.short= pageHeader.title
+  h4.background-image-text.text.short= pageHeader.subtitle
+
+  div.container
+    +renderCardsCollection(cards)
+
+  div.container
+    h2.text-centered Random Deck Stats:
+
+  div.row.container
+    div.card
+      div.card-content
+        div.row.text-centered
+          div.col.s3
+            p Elixir cost:
+              +renderTotalElixirCost(cards)
+          div.col.s3
+            p Troops:
+              +renderTotalCardType(cards, 'Troop')
+          div.col.s3
+            p Spells:
+              +renderTotalCardType(cards, 'Spell')
+          div.col.s3
+            p Buildings:
+              +renderTotalCardType(cards, 'Building')

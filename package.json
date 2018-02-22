@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "version": "",
+  "scripts": {
+    "watch": "nodemon init.js -e js,pug",
+    "start": "node init.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "jade": "^1.11.0",
+    "pug": "^2.0.0-rc.4",
+    "trae": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  }
+}

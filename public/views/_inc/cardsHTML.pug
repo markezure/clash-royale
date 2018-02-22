@@ -1,0 +1,69 @@
+mixin renderCardsCollection(cards)
+  div.row
+    each card in cards
+      div.col-md-3
+        +renderCard(card)
+
+mixin createPagination(pages)
+  - if (pages.total && pages.total > 0) {
+    div.content.row
+      ul.pagination.col.s12.m6.offset-m3.text-centered
+        - for (var i = 0; i < pages.total; ++i) {
+          li(class=(pages.currentPage === i ? 'active' : 'waves-effect'))
+            a(href=`/cards?page=${i}&limit=${pages.limit}`)= i+1
+        - }
+  - }
+
+mixin renderCard(card)
+  div.card.text-centered
+    div.card-content
+      div.card-name
+        a(href='/cards/' + card.idName)=card.name
+        p.small.text.type= card.type
+      div.image.card-image-container
+        a(href='/cards/' + card.idName, title='Details')
+          img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', style=(card.rarity == 'Legendary')).card-image.img-fluid
+          p.small.text.rarity= card.rarity
+      div.card-action
+        div.col.s12
+          i.elixir.custom-icon
+          span.custom-icon-label x #{card.elixirCost}
+
+mixin renderCardWithDetail(card)
+  div.col.s12.card
+    div.col.s4
+      img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', class='card-image-detail')
+    div.col.s8
+      h2.card-info-name= card.name
+      div.row
+        div.col.s6
+          p.text-faded= `${card.type} - ${card.rarity}`
+        div.col.s6.offset-6
+          P.right-align
+            i.elixir.custom-icon
+            span.custom-icon-label.text-faded x #{card.elixirCost}
+      div.row
+        div.col.s12
+          h5 Description:
+          p= card.description
+
+mixin renderTotalElixirCost
+  - let i = 0
+  each card in cards
+    - i += parseInt(card.elixirCost)
+  - i = (i / 8).toFixed(1);
+  = i
+
+mixin renderTotalCardType(cards, type)
+  - let cardsOfType = 0
+  each card in cards
+    - if (card.type === type) {
+      - cardsOfType++
+    - }
+  = cardsOfType
+
+//- Chests
+
+mixin renderChestArenas(chests)
+  each chest in chests
+    div= chest.arena
