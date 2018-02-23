@@ -21,24 +21,25 @@ mixin renderCard(card)
           span.custom-icon-label x #{card.elixirCost}
 
 mixin renderCardWithDetail(card)
-  div.card2
-    div.row
-      div.col-4
-        img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', class='card-image-detail').img-fluid
-      div.col-8
-        h2.card-info-name= card.name
-        div.container
-          div.row
-            div.col-md-6
-              p.text-faded= `${card.type} - ${card.rarity}`
-            div.col-md-6.offset-6
-              P.right-align
-                i.elixir.custom-icon
-                span.custom-icon-label.text-faded x #{card.elixirCost}
-        div.row
-          div
-            h5 Descrição:
-            p= card.description
+  div.card2.mx-auto
+    div.container
+      div.row
+        div.col-4
+          img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', class='card-image-detail').img-fluid
+        div.col-8
+          h2.card-info-name= card.name
+          div.container
+            div.row
+              div.col-md-6
+                p.text-faded= `${card.type} - ${card.rarity}`
+              div.col-md-6.offset-6
+                P.right-align
+                  i.elixir.custom-icon
+                  span.custom-icon-label.text-faded x #{card.elixirCost}
+            div.row
+              div
+                h5 Descrição:
+                p= card.description
 
 mixin renderTotalElixirCost
   - let i = 0
