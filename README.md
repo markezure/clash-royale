@@ -10,4 +10,4 @@ e plataforma tem essa facilidade tanto na manutenção quando nos projetos em pr
 1. Baixe o projeto do branch <strong>clash-v1</strong>
 2. acesso o diretorio principal pelo CMD, e rode o comando <strong>npm start</strong>
 
-e só verificar, caso preciso modificar a URL Base, vá para <strong>/app/config.js</strong>
+caso preciso modificar a URL Base, vá para <strong>/app/config.js</strong>
